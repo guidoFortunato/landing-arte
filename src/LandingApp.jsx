@@ -1,4 +1,4 @@
-import { Footer, NavbarPublic } from "./components";
+// import { Footer, NavbarPublic } from "./components";
 import { AppRouter } from "./router/AppRouter";
 
 export const LandingApp = () => {
@@ -6,10 +6,10 @@ export const LandingApp = () => {
 
   return (
     <>
-      {user ? <NavbarPublic /> : <p>cargando...</p>}
+      {/* {user ? <NavbarPublic /> : <p>cargando...</p>} */}
 
       <AppRouter />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
