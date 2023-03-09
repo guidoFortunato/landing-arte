@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import { CssBaseline } from "@mui/material";
-import { AppRouter } from "./router/AppRouter.jsx";
 import { BrowserRouter } from "react-router-dom";
+
+import { LandingApp } from "./LandingApp.jsx";
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -35,7 +36,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <AppRouter />
+        <LandingApp />
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>

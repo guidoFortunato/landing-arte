@@ -7,17 +7,17 @@ import DraftsIcon from "@mui/icons-material/Drafts";
 const dataLinks = [
   {
     title: "Home",
-    path: "/",
+    path: "/home",
     icon: <InboxIcon />,
   },
   {
     title: "Login",
-    path: "/login",
+    path: "/auth/login",
     icon: <DraftsIcon />,
   },
   {
     title: "Register",
-    path: "/register",
+    path: "/auth/register",
     icon: <MenuIcon />,
   },
 ];

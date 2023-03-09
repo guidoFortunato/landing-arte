@@ -46,7 +46,7 @@ export const NavbarPublic = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               component={Link}
-              to="/login"
+              to="/auth/login"
               color="inherit"
             >
               <AccountCircle />

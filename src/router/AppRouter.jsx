@@ -1,27 +1,21 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+
+import { AuthRoutes } from "../auth/routes/";
 import { NotFound } from "../components";
-import { LayoutPublic } from "../layouts";
-import { Home, Login, Register } from "../pages";
+
+import { LandingRoutes } from "../landing/routes/";
 
 export const AppRouter = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<LayoutPublic />}>
-          {/* Rutas inicio */}
-          <Route index path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Route>
+        {/* login y registro */}
+        <Route path="/auth/*" element={<AuthRoutes />} />
 
-        <Route path="/error" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="/error" />} />
+        {/* publucas */}
+        <Route path="/*" element={<LandingRoutes />} />
 
-        {/* Rutas perfil */}
-
-        {/* <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/profile" element={<Profile />} />
-      <Route path="/profile/edit" element={<ProfileEdit />} /> */}
+        {/* <Routes path="/error" element={<NotFound />} /> */}
       </Routes>
     </>
   );
