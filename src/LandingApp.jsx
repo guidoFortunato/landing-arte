@@ -1,3 +1,4 @@
+import { Container } from "@mui/material";
 import { Footer, NavbarPublic } from "./components";
 import { AppRouter } from "./router/AppRouter";
 
@@ -7,8 +8,9 @@ export const LandingApp = () => {
   return (
     <>
       {user ? <NavbarPublic /> : <p>cargando...</p>}
-
-      <AppRouter />
+      <Container>
+        <AppRouter />
+      </Container>
       <Footer />
     </>
   );

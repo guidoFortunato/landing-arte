@@ -1,2 +1,1 @@
-export * from "./LayoutAuth";
-export * from "./LayoutComponentAuth";
+export * from "./AuthLayout";
