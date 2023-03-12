@@ -1,6 +1,25 @@
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { AuthLayout } from "../layouts";
+
+import { styled } from '@mui/material/styles';
+import TextField from '@mui/material/TextField';
+
+const CssTextField = styled(TextField)({
+  '& label.Mui-focused': {
+    color: '#1976d2',
+  },
+  
+  '& .MuiOutlinedInput-root': {
+    
+    '&:hover fieldset': {
+      borderColor: '#1976d2',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: '#1976d2',
+    },
+  },
+});
 
 export const Login = () => {
   const handleSubmit = (e) => {
@@ -12,7 +31,7 @@ export const Login = () => {
     <>
       <AuthLayout>
         <Box component="form" sx={{ mt: 1 }}  onSubmit={ handleSubmit } >
-          <TextField
+          <CssTextField
             margin="normal"
             required
             fullWidth
@@ -22,7 +41,7 @@ export const Login = () => {
             autoComplete="email"
             // autoFocus
           />
-          <TextField
+          <CssTextField
             margin="normal"
             required
             fullWidth

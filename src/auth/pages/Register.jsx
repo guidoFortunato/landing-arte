@@ -1,6 +1,25 @@
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { AuthLayout } from "../layouts";
+
+import { styled } from '@mui/material/styles';
+import TextField from '@mui/material/TextField';
+
+const CssTextField = styled(TextField)({
+  '& label.Mui-focused': {
+    color: '#1976d2',
+  },
+  
+  '& .MuiOutlinedInput-root': {
+    
+    '&:hover fieldset': {
+      borderColor: '#1976d2',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: '#1976d2',
+    },
+  },
+});
 
 export const Register = () => {
   const handleSubmit = (e) => {
@@ -11,7 +30,7 @@ export const Register = () => {
   return (
     <AuthLayout>
       <Box component="form" sx={{ mt: 1 }} onSubmit={ handleSubmit } >
-      <TextField
+      <CssTextField
         margin="normal"
         required
         fullWidth
@@ -19,9 +38,10 @@ export const Register = () => {
         label="Nombre"
         name="text"
         autoComplete="name"
+        // color="secondary.dark"
         // autoFocus
       />
-      <TextField
+      <CssTextField
         margin="normal"
         required
         fullWidth
@@ -31,7 +51,7 @@ export const Register = () => {
         autoComplete="lastname"
         // autoFocus
       />
-      <TextField
+      <CssTextField
         margin="normal"
         required
         fullWidth
@@ -41,7 +61,7 @@ export const Register = () => {
         autoComplete="email"
         // autoFocus
       />
-      <TextField
+      <CssTextField
         margin="normal"
         required
         fullWidth
@@ -51,7 +71,7 @@ export const Register = () => {
         id="password"
         autoComplete="current-password"
       />
-      <TextField
+      <CssTextField
         margin="normal"
         required
         fullWidth
@@ -61,7 +81,6 @@ export const Register = () => {
         id="confirmPassword"
         autoComplete="current-password"
       />
-
       <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
         Crear cuenta
       </Button>
