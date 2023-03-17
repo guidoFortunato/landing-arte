@@ -55,7 +55,7 @@ export const NavbarDashboard = ({ drawerWidth }) => {
               {/* <Box sx={{ marginLeft: "auto" }} component="nav"> */}
               <Box>
                 <IconButton component={Link} to="/dashboard" sx={{ p: 0, mr: 3 }}>
-                  <Avatar alt="foto perfil" src="/assets/yo.png" />
+                  <Avatar alt="foto perfil" src="" />
                 </IconButton>
                 <IconButton color="error">
                   <LogoutOutlined />

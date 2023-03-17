@@ -5,3 +5,4 @@ export * from "./NavbarPrivate";
 export * from "./NavbarPublic";
 export * from "./NavListDrawer";
 export * from "./NotFound";
+export * from "./SideBar";

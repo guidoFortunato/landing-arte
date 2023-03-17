@@ -42,10 +42,10 @@ export const NavListDrawer = ({ setOpen }) => {
   return (
     <Box
       sx={{
-        width: 250,
+        width: 240,
       }}
+      component="nav"
     >
-      <nav>
         <List>
           {user 
              ? dataLinksUserTrue.map((item) => (
@@ -75,7 +75,6 @@ export const NavListDrawer = ({ setOpen }) => {
             
             }
         </List>
-      </nav>
     </Box>
   );
 };
