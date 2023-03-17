@@ -15,53 +15,56 @@ export const NavbarPublic = () => {
 
   return (
     <>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ display: { xs: "flex", md: "none" } }}
-            onClick={() => setOpen(true)}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h5"
-            component={Link}
-            to="/"
-            sx={{
-              flexGrow: 1,
-              textDecoration: "none",
-              color: "inherit"
-            }}
-          >
-            Arte
-          </Typography>
-          <Box>
+      <header>
+        <AppBar position="static" component="div">
+          <Toolbar>
             <IconButton
               size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              component={Link}
-              to="/auth/login"
+              edge="start"
               color="inherit"
+              aria-label="menu"
+              sx={{ display: { xs: "flex", md: "none" } }}
+              onClick={() => setOpen(true)}
             >
-              <AccountCircle />
+              <MenuIcon />
             </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        open={open}
-        anchor="left"
-        onClose={() => setOpen(false)}
-        sx={{ display: { xs: "flex", md: "none" } }}
-      >
-        <NavListDrawer setOpen={setOpen} />
-      </Drawer>
+            <Typography
+              variant="h5"
+              component={Link}
+              to="/"
+              sx={{
+                // flexGrow: 1,
+                textDecoration: "none",
+                color: "inherit",
+                // textAlign: "center",
+              }}
+            >
+              ARTE
+            </Typography>
+            <Box sx={{ marginLeft: "auto" }} component="nav">
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                component={Link}
+                to="/auth/login"
+                color="inherit"
+              >
+                <AccountCircle />
+              </IconButton>
+            </Box>
+          </Toolbar>
+        </AppBar>
+        <Drawer
+          open={open}
+          anchor="left"
+          onClose={() => setOpen(false)}
+          sx={{ display: { xs: "flex", md: "none" } }}
+        >
+          <NavListDrawer setOpen={setOpen} />
+        </Drawer>
+      </header>
     </>
   );
 };

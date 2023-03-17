@@ -8,9 +8,9 @@ export const LandingApp = () => {
   return (
     <>
       {user ? <NavbarPublic /> : <p>cargando...</p>}
-      <Container>
-        <AppRouter />
-      </Container>
+        <Container component="main">
+          <AppRouter />
+        </Container>
       <Footer />
     </>
   );

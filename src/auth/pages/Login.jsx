@@ -2,21 +2,20 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { AuthLayout } from "../layouts";
 
-import { styled } from '@mui/material/styles';
-import TextField from '@mui/material/TextField';
+import { styled } from "@mui/material/styles";
+import TextField from "@mui/material/TextField";
 
 const CssTextField = styled(TextField)({
-  '& label.Mui-focused': {
-    color: '#1976d2',
+  "& label.Mui-focused": {
+    color: "#1976d2",
   },
-  
-  '& .MuiOutlinedInput-root': {
-    
-    '&:hover fieldset': {
-      borderColor: '#1976d2',
+
+  "& .MuiOutlinedInput-root": {
+    "&:hover fieldset": {
+      borderColor: "#1976d2",
     },
-    '&.Mui-focused fieldset': {
-      borderColor: '#1976d2',
+    "&.Mui-focused fieldset": {
+      borderColor: "#1976d2",
     },
   },
 });
@@ -30,27 +29,34 @@ export const Login = () => {
   return (
     <>
       <AuthLayout>
-        <Box component="form" sx={{ mt: 1 }}  onSubmit={ handleSubmit } >
-          <CssTextField
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email"
-            name="email"
-            autoComplete="email"
-            // autoFocus
-          />
-          <CssTextField
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Contraseña"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-          />
+        <Box component="form" sx={{ mt: 1 }} onSubmit={handleSubmit}>
+          <Grid container spacing={2}>
+           
+            <Grid item xs={12}>
+              <CssTextField
+                margin="normal"
+                required
+                fullWidth
+                id="email"
+                label="Email"
+                name="email"
+                autoComplete="email"
+                // autoFocus
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <CssTextField
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label="Contraseña"
+                type="password"
+                id="password"
+                autoComplete="current-password"
+              />
+            </Grid>
+          </Grid>
           <Button
             type="submit"
             fullWidth
@@ -62,7 +68,7 @@ export const Login = () => {
           <Grid container>
             <Grid item>
               <Typography component={Link} to="/auth/register" variant="p">
-                ¿Todavía no tenes una cuenta?
+                ¿Todavía no tienes una cuenta?
               </Typography>
             </Grid>
           </Grid>
