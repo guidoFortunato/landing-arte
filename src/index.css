@@ -6,7 +6,7 @@ body{
 
 /* background-image: url("https://via.placeholder.com/1900x800"); */
 .img-home{
-  height: 80vh;
+  height: 50vh;
   background-image: url("https://picsum.photos/360/460");
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,11 +14,11 @@ body{
   background-attachment: scroll;
 }
 
-.css-1oqqzyl-MuiContainer-root{
+/* .css-1oqqzyl-MuiContainer-root{
   max-width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
-}
+} */
 
 @media screen and (min-width: 375px) {
   .img-home{

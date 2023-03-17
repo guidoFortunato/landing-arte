@@ -15,7 +15,7 @@ export const NavbarPublic = () => {
 
   return (
     <>
-      
+      <Box component="header">
         <AppBar position="static" component="div">
           <Toolbar>
             <IconButton
@@ -56,14 +56,15 @@ export const NavbarPublic = () => {
             </Box>
           </Toolbar>
         </AppBar>
-        <Drawer
-          open={open}
-          anchor="left"
-          onClose={() => setOpen(false)}
-          sx={{ display: { xs: "flex", md: "none" } }}
-        >
-          <NavListDrawer setOpen={setOpen} />
-        </Drawer>
+      </Box>
+      <Drawer
+        open={open}
+        anchor="left"
+        onClose={() => setOpen(false)}
+        sx={{ display: { xs: "flex", md: "none" } }}
+      >
+        <NavListDrawer setOpen={setOpen} />
+      </Drawer>
     </>
   );
 };
