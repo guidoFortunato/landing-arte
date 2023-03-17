@@ -15,7 +15,7 @@ export const NavbarPublic = () => {
 
   return (
     <>
-      <header>
+      
         <AppBar position="static" component="div">
           <Toolbar>
             <IconButton
@@ -64,7 +64,6 @@ export const NavbarPublic = () => {
         >
           <NavListDrawer setOpen={setOpen} />
         </Drawer>
-      </header>
     </>
   );
 };

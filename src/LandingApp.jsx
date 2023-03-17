@@ -7,7 +7,7 @@ export const LandingApp = () => {
 
   return (
     <>
-      {user ? <NavbarPublic /> : <p>cargando...</p>}
+      <header>{user ? <NavbarPublic /> : <p>cargando...</p>}</header>
         <Container component="main">
           <AppRouter />
         </Container>

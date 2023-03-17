@@ -5,9 +5,8 @@ body{
 }
 
 /* background-image: url("https://via.placeholder.com/1900x800"); */
-header{
+.img-home{
   height: 80vh;
-  /* background-image: url("https://via.placeholder.com/360×640"); */
   background-image: url("https://picsum.photos/360/460");
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,29 +14,35 @@ header{
   background-attachment: scroll;
 }
 
+.css-1oqqzyl-MuiContainer-root{
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 @media screen and (min-width: 375px) {
-  header{
+  .img-home{
     background-image: url("https://picsum.photos/375/667");
   }
 }
 @media screen and (min-width: 720px) {
-  header{
+  .img-home{
     background-image: url("https://picsum.photos/720/1280");
   }
 }
 @media screen and (min-width: 1366px) {
-  header{
-    background-image: url("https://picsum.photos/360/460");
+  .img-home{
+    background-image: url("https://picsum.photos/1366/768");
   }
 }
 @media screen and (min-width: 1440px) {
-  header{
-    background-image: url("https://picsum.photos/360/460");
+  .img-home{
+    background-image: url("https://picsum.photos/1440/900");
   }
 }
 @media screen and (min-width: 1920px) {
-  header{
-    background-image: url("https://picsum.photos/360/460");
+  .img-home{
+    background-image: url("https://picsum.photos/1920/1080");
   }
 }
 
